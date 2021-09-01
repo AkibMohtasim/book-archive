@@ -1,0 +1,27 @@
+body{
+  background-color: rgba(0, 0, 0, 0.63);
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      115deg,
+      rgba(46, 46, 77, 0.8),
+      rgba(115, 115, 131, 0.3)
+    ),
+    url("https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.book-section{
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
