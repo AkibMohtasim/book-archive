@@ -21,7 +21,8 @@ body::before {
 }
 
 .book-section{
-  margin-top: 100px;
+  margin-top: 40px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }

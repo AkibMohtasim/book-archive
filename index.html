@@ -9,26 +9,18 @@
   <title>Book Archive</title>
 </head>
 <body >
-  <div class="input-group mb-3 w-50 mx-auto m-5">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-  </div>
+  <h1 class="text-white text-center m-5">Welcome to the Book Archive</h1>
 
-  <section class="book-section">
-    <div class="card m-5" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Book name</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">author name</li>
-        <li class="list-group-item">publisher</li>
-        <li class="list-group-item">first published</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">see more</a>
-      </div>
-    </div>
+  
+  <div class="input-group mb-3 w-50 mx-auto m-5">
+    <input id="search-bar" type="text" class="form-control" placeholder="Search by book or author's name..." aria-label="Recipient's username" aria-describedby="button-addon2">
+
+    <button onclick="searchBook()" class="btn btn-outline-secondary text-white border-white" type="button" id="button-addon2">Search</button>
+  </div>
+  <section id="search-result">
+    
+  </section>
+  <section id="book-section" class="book-section">
   </section>
 
 
