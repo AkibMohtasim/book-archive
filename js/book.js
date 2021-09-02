@@ -2,23 +2,26 @@ const searchBar = document.getElementById('search-bar');
 const bookSection = document.getElementById('book-section');
 const searchNumber = document.getElementById('search-result');
 
-
 const searchBook = () => {
   const searchText = searchBar.value;
   searchBar.value = '';
   console.log(searchText);
   
-  const url = `http://openlibrary.org/search.json?q=${searchText}`;
+  const url = `https://openlibrary.org/search.json?q=${searchText}`;
 
+  //fetch for total search result
   fetch(url)
   .then(res => res.json())
   .then(data => totalSearchResult(data.numFound));
 
+  //fetch for UI
   fetch(url)
   .then(res => res.json())
-  .then(data => bookName(data.docs));
+  .then(data => bookName(data.docs.slice(0, 20)));
 };
 
+
+//search results section
 const totalSearchResult = (number) => {
   searchNumber.textContent = '';
   const p = document.createElement('p');
@@ -33,11 +36,10 @@ const totalSearchResult = (number) => {
 };
 
 
-
+//UI section
 const bookName = (books) => {
-  //console.log(books);
   bookSection.textContent = '';
-
+  //console.log(books);
   books.forEach((book) => {
     const div = document.createElement('div');
     div.innerHTML = `
@@ -56,6 +58,3 @@ const bookName = (books) => {
   bookSection.appendChild(div);
   });
 };
-  
-
-
